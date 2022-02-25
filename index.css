@@ -114,4 +114,11 @@ section {
   .intro-wrapper-mobile {
     display: none;
   }
+  h1 {
+    font-size: 6rem;
+    margin: auto;
+    margin-top: calc(-2 * var(--grid));
+    margin-bottom: calc(2 * var(--grid));
+    max-width: 800px;
+  }
 }
