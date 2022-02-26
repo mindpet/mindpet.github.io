@@ -86,6 +86,7 @@ h2 {
 }
 
 .image {
+  display: block;
   margin: auto;
   max-width: 300px;
 
@@ -139,6 +140,30 @@ section {
       margin: auto;
       max-width: 1024px;
       padding: calc(2 * var(--grid)) 0;
+    }
+  }
+
+  &.intro {
+    display: block;
+
+    background: linear-gradient(
+      0deg,
+      rgba(249, 248, 253, 1) 0%,
+      rgba(135, 193, 243, 1) 60%
+    );
+
+    .image {
+      position: relative;
+      z-index: 1;
+    }
+
+    p {
+      color: var(--color-purple);
+      margin: auto;
+      margin-top: calc(2 * var(--grid));
+      margin-bottom: calc(2 * var(--grid));
+      max-width: 600px;
+      opacity: 0.7;
     }
   }
 
@@ -203,28 +228,24 @@ section {
       }
     }
   }
-}
 
-.intro {
-  display: block;
+  &.section-5 {
+    h2 {
+      font-size: 12vw;
 
-  background: linear-gradient(
-    0deg,
-    rgba(249, 248, 253, 1) 0%,
-    rgba(135, 193, 243, 1) 60%
-  );
+      @include respond-to(large) {
+        font-size: 4rem;
+        max-width: 600px;
+      }
+    }
 
-  .image {
-    position: relative;
-    z-index: 1;
-  }
-
-  p {
-    color: var(--color-purple);
-    margin: auto;
-    margin-top: calc(2 * var(--grid));
-    margin-bottom: calc(2 * var(--grid));
-    max-width: 600px;
-    opacity: 0.7;
+    p {
+      color: var(--color-purple);
+      margin: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      max-width: 600px;
+      opacity: 0.7;
+    }
   }
 }

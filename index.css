@@ -72,6 +72,7 @@ h2 {
     color: var(--color-orange); }
 
 .image {
+  display: block;
   margin: auto;
   max-width: 300px; }
   @media only screen and (min-width: 1024px) {
@@ -111,6 +112,19 @@ section {
       margin: auto;
       max-width: 1024px;
       padding: calc(2 * var(--grid)) 0; } }
+  section.intro {
+    display: block;
+    background: linear-gradient(0deg, #f9f8fd 0%, #87c1f3 60%); }
+    section.intro .image {
+      position: relative;
+      z-index: 1; }
+    section.intro p {
+      color: var(--color-purple);
+      margin: auto;
+      margin-top: calc(2 * var(--grid));
+      margin-bottom: calc(2 * var(--grid));
+      max-width: 600px;
+      opacity: 0.7; }
   @media only screen and (min-width: 1024px) {
     section.section-2 h2 {
       order: 1; }
@@ -144,18 +158,17 @@ section {
         display: block;
         max-width: inherit;
         width: 100%; } }
-
-.intro {
-  display: block;
-  background: linear-gradient(0deg, #f9f8fd 0%, #87c1f3 60%); }
-  .intro .image {
-    position: relative;
-    z-index: 1; }
-  .intro p {
+  section.section-5 h2 {
+    font-size: 12vw; }
+    @media only screen and (min-width: 1024px) {
+      section.section-5 h2 {
+        font-size: 4rem;
+        max-width: 600px; } }
+  section.section-5 p {
     color: var(--color-purple);
     margin: auto;
-    margin-top: calc(2 * var(--grid));
-    margin-bottom: calc(2 * var(--grid));
+    margin-top: 0;
+    margin-bottom: 0;
     max-width: 600px;
     opacity: 0.7; }
 
