@@ -108,8 +108,19 @@ img {
 header {
   margin-bottom: calc(2 * var(--grid));
 
+  @include respond-to(large) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .button {
     display: none;
+
+    @include respond-to(large) {
+      display: block;
+    }
   }
 
   .app-title {
@@ -118,12 +129,22 @@ header {
     font-size: 8vw;
 
     @include respond-to(large) {
+      position: absolute;
+      left: 50%;
+
+      transform: translateX(-50%);
       font-size: 2.2rem;
     }
   }
 
   .app-icon {
     display: none;
+
+    @include respond-to(large) {
+      display: block;
+
+      width: 70px;
+    }
   }
 }
 
@@ -139,7 +160,11 @@ section {
 
       margin: auto;
       max-width: 1024px;
-      padding: calc(2 * var(--grid)) 0;
+      padding: calc(3 * var(--grid)) 0;
+    }
+
+    @include respond-to(x-large) {
+      padding: calc(6 * var(--grid)) 0;
     }
   }
 
@@ -164,6 +189,43 @@ section {
       margin-bottom: calc(2 * var(--grid));
       max-width: 600px;
       opacity: 0.7;
+    }
+
+    .wrapper-mobile {
+      @include respond-to(large) {
+        display: none;
+      }
+      .caps {
+        display: inline-flex;
+        margin-bottom: calc(0.5 * var(--grid));
+      }
+    }
+
+    .wrapper-desktop {
+      display: none;
+
+      @include respond-to(large) {
+        display: block;
+
+        margin-bottom: calc(2 * var(--grid));
+      }
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .qr {
+          width: 70px;
+        }
+
+        .button {
+          position: absolute;
+          left: 50%;
+
+          transform: translateX(-50%);
+        }
+      }
     }
   }
 
@@ -254,34 +316,92 @@ section {
 }
 
 footer {
+  @include respond-to(large) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 0 var(--grid);
+    margin-bottom: calc(3 * var(--grid));
+  }
+
   .button {
     margin-bottom: calc(2 * var(--grid));
+
+    @include respond-to(large) {
+      position: absolute;
+      left: 50%;
+
+      transform: translateX(-50%);
+      order: 2;
+
+      margin-bottom: 0;
+    }
   }
 
   nav {
     margin-bottom: calc(2 * var(--grid));
 
+    @include respond-to(large) {
+      display: flex;
+      flex-wrap: wrap;
+      order: 1;
+
+      margin-bottom: 0;
+    }
+
     a {
       display: block;
 
       margin-bottom: calc(0.5 * var(--grid));
+
+      @include respond-to(large) {
+        margin-right: var(--grid);
+        margin-bottom: 0;
+      }
     }
   }
 
   div {
     margin-bottom: calc(2 * var(--grid));
 
+    @include respond-to(large) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      order: 3;
+
+      margin: 0;
+    }
+
     a {
       display: block;
 
       margin: auto;
 
+      @include respond-to(large) {
+        margin-left: var(--grid);
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+
       &:first-child {
         width: 180px;
+
+        @include respond-to(large) {
+          order: 2;
+        }
       }
 
       &:nth-child(2) {
         width: 40px;
+
+        @include respond-to(large) {
+          order: 1;
+        }
       }
     }
   }

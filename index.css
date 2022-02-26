@@ -89,17 +89,33 @@ img {
 
 header {
   margin-bottom: calc(2 * var(--grid)); }
+  @media only screen and (min-width: 1024px) {
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center; } }
   header .button {
     display: none; }
+    @media only screen and (min-width: 1024px) {
+      header .button {
+        display: block; } }
   header .app-title {
     font-family: "gela";
     color: white;
     font-size: 8vw; }
     @media only screen and (min-width: 1024px) {
       header .app-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 2.2rem; } }
   header .app-icon {
     display: none; }
+    @media only screen and (min-width: 1024px) {
+      header .app-icon {
+        display: block;
+        width: 70px; } }
 
 section {
   padding: var(--grid); }
@@ -111,7 +127,10 @@ section {
       justify-content: center;
       margin: auto;
       max-width: 1024px;
-      padding: calc(2 * var(--grid)) 0; } }
+      padding: calc(3 * var(--grid)) 0; } }
+  @media only screen and (min-width: 1180px) {
+    section .wrapper {
+      padding: calc(6 * var(--grid)) 0; } }
   section.intro {
     display: block;
     background: linear-gradient(0deg, #f9f8fd 0%, #87c1f3 60%); }
@@ -125,6 +144,28 @@ section {
       margin-bottom: calc(2 * var(--grid));
       max-width: 600px;
       opacity: 0.7; }
+    @media only screen and (min-width: 1024px) {
+      section.intro .wrapper-mobile {
+        display: none; } }
+    section.intro .wrapper-mobile .caps {
+      display: inline-flex;
+      margin-bottom: calc(0.5 * var(--grid)); }
+    section.intro .wrapper-desktop {
+      display: none; }
+      @media only screen and (min-width: 1024px) {
+        section.intro .wrapper-desktop {
+          display: block;
+          margin-bottom: calc(2 * var(--grid)); } }
+      section.intro .wrapper-desktop > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        section.intro .wrapper-desktop > div .qr {
+          width: 70px; }
+        section.intro .wrapper-desktop > div .button {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%); }
   @media only screen and (min-width: 1024px) {
     section.section-2 h2 {
       order: 1; }
@@ -175,21 +216,64 @@ section {
       max-width: 600px;
       opacity: 0.7; }
 
+@media only screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 var(--grid);
+    margin-bottom: calc(3 * var(--grid)); } }
 footer .button {
   margin-bottom: calc(2 * var(--grid)); }
+  @media only screen and (min-width: 1024px) {
+    footer .button {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      order: 2;
+      margin-bottom: 0; } }
 footer nav {
   margin-bottom: calc(2 * var(--grid)); }
+  @media only screen and (min-width: 1024px) {
+    footer nav {
+      display: flex;
+      flex-wrap: wrap;
+      order: 1;
+      margin-bottom: 0; } }
   footer nav a {
     display: block;
     margin-bottom: calc(0.5 * var(--grid)); }
+    @media only screen and (min-width: 1024px) {
+      footer nav a {
+        margin-right: var(--grid);
+        margin-bottom: 0; } }
 footer div {
   margin-bottom: calc(2 * var(--grid)); }
+  @media only screen and (min-width: 1024px) {
+    footer div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      order: 3;
+      margin: 0; } }
   footer div a {
     display: block;
     margin: auto; }
+    @media only screen and (min-width: 1024px) {
+      footer div a {
+        margin-left: var(--grid); } }
+    footer div a:hover {
+      opacity: 0.5; }
     footer div a:first-child {
       width: 180px; }
+      @media only screen and (min-width: 1024px) {
+        footer div a:first-child {
+          order: 2; } }
     footer div a:nth-child(2) {
       width: 40px; }
+      @media only screen and (min-width: 1024px) {
+        footer div a:nth-child(2) {
+          order: 1; } }
 
 /*# sourceMappingURL=index.css.map */
