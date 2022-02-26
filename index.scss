@@ -230,11 +230,14 @@ section {
   }
 
   &.section-5 {
+    padding-bottom: 0;
+
     h2 {
       font-size: 12vw;
 
       @include respond-to(large) {
         font-size: 4rem;
+        margin: auto;
         max-width: 600px;
       }
     }
@@ -242,10 +245,44 @@ section {
     p {
       color: var(--color-purple);
       margin: auto;
-      margin-top: 0;
-      margin-bottom: 0;
+      margin-top: calc(2 * var(--grid));
+      margin-bottom: calc(2 * var(--grid));
       max-width: 600px;
       opacity: 0.7;
+    }
+  }
+}
+
+footer {
+  .button {
+    margin-bottom: calc(2 * var(--grid));
+  }
+
+  nav {
+    margin-bottom: calc(2 * var(--grid));
+
+    a {
+      display: block;
+
+      margin-bottom: calc(0.5 * var(--grid));
+    }
+  }
+
+  div {
+    margin-bottom: calc(2 * var(--grid));
+
+    a {
+      display: block;
+
+      margin: auto;
+
+      &:first-child {
+        width: 180px;
+      }
+
+      &:nth-child(2) {
+        width: 40px;
+      }
     }
   }
 }
