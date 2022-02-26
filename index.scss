@@ -138,6 +138,7 @@ section {
 
       margin: auto;
       max-width: 1024px;
+      padding: calc(2 * var(--grid)) 0;
     }
   }
 
@@ -164,6 +165,41 @@ section {
       @include respond-to(large) {
         color: #e3fffd;
         filter: drop-shadow(0 0 0.35rem rgba(255, 255, 255, 0.3));
+      }
+    }
+  }
+
+  &.section-4 {
+    @include respond-to(large) {
+      background: url("./images/bg.jpeg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+
+    h2 {
+      @include respond-to(large) {
+        color: white;
+        width: 100%;
+        max-width: 900px;
+        margin-top: -110px;
+      }
+    }
+
+    .image {
+      &.mobile {
+        @include respond-to(large) {
+          display: none;
+        }
+      }
+      &.desktop {
+        display: none;
+
+        @include respond-to(large) {
+          display: block;
+
+          max-width: inherit;
+          width: 100%;
+        }
       }
     }
   }
