@@ -183,6 +183,8 @@ section {
     margin: auto;
     margin-top: var(--grid);
     width: 90px; }
+    section.section-3 h2 a:hover {
+      opacity: 0.5; }
   @media only screen and (min-width: 1024px) {
     section.section-4 {
       background: url("./images/bg.jpeg") no-repeat center center fixed;

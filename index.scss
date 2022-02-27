@@ -260,6 +260,10 @@ section {
         margin: auto;
         margin-top: var(--grid);
         width: 90px;
+
+        &:hover {
+          opacity: 0.5;
+        }
       }
     }
   }
