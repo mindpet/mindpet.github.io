@@ -184,6 +184,10 @@ section {
       picture {
         display: block;
         padding-bottom: 121%;
+
+        @include respond-to(large) {
+          padding-bottom: 118%;
+        }
         img {
           position: absolute;
         }

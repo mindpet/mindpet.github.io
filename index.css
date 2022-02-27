@@ -140,6 +140,9 @@ section {
       section.intro .image picture {
         display: block;
         padding-bottom: 121%; }
+        @media only screen and (min-width: 1024px) {
+          section.intro .image picture {
+            padding-bottom: 118%; } }
         section.intro .image picture img {
           position: absolute; }
     section.intro p {
