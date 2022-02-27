@@ -180,6 +180,14 @@ section {
     .image {
       position: relative;
       z-index: 1;
+
+      picture {
+        display: block;
+        padding-bottom: 121%;
+        img {
+          position: absolute;
+        }
+      }
     }
 
     p {

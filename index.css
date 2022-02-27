@@ -137,6 +137,11 @@ section {
     section.intro .image {
       position: relative;
       z-index: 1; }
+      section.intro .image picture {
+        display: block;
+        padding-bottom: 121%; }
+        section.intro .image picture img {
+          position: absolute; }
     section.intro p {
       color: var(--color-purple);
       margin: auto;
