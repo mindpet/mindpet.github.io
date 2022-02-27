@@ -253,6 +253,14 @@ section {
         color: #e3fffd;
         filter: drop-shadow(0 0 0.35rem rgba(255, 255, 255, 0.3));
       }
+
+      a {
+        display: block;
+
+        margin: auto;
+        margin-top: var(--grid);
+        width: 90px;
+      }
     }
   }
 

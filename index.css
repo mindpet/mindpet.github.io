@@ -178,6 +178,11 @@ section {
     section.section-3 h2 {
       color: #e3fffd;
       filter: drop-shadow(0 0 0.35rem rgba(255, 255, 255, 0.3)); } }
+  section.section-3 h2 a {
+    display: block;
+    margin: auto;
+    margin-top: var(--grid);
+    width: 90px; }
   @media only screen and (min-width: 1024px) {
     section.section-4 {
       background: url("./images/bg.jpeg") no-repeat center center fixed;
